@@ -8,8 +8,11 @@
 .content__markdown h4,
 .content__markdown h5,
 .content__markdown h6 {
-  margin-top: 0;
   text-align: left;
+}
+
+.content__markdown h1 {
+  margin-top: 1rem;
 }
 
 .content__markdown h1 + h2,

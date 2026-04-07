@@ -1,4 +1,4 @@
-import { MahdavaUIProvider, MarkdownRenderer, type LinkRendererProps } from '@mahdava/ui'
+import { MahdavaUIProvider, MarkdownRenderer, Select, type LinkRendererProps } from '@mahdava/ui'
 import { useEffect, useMemo, useState } from 'react'
 import './App.css'
 
@@ -97,36 +97,32 @@ function App() {
   return (
     <MahdavaUIProvider linkComponent={AppLink}>
       <div className="min-h-screen">
-        <header className="flex flex-col items-stretch justify-between gap-4 px-4 pt-4 md:flex-row md:items-center md:px-8 md:pt-6">
-          <p className="m-0 text-xs font-bold uppercase tracking-[0.12em] text-(--accent-2)">
-            Lusse lists
-          </p>
+        <header className="flex flex-col items-stretch justify-between gap-4 px-4 pt-5 md:flex-row md:items-center md:px-8 md:pt-8">
+          <div className="min-w-0">
+            <p className="m-0 text-xs font-bold uppercase tracking-[0.12em] text-(--accent-2)">
+              Lusse lists
+            </p>
+            <p className="mt-1 text-sm text-[color-mix(in_srgb,var(--text)_88%,transparent)] md:text-base">
+              All them random lists
+            </p>
+          </div>
 
-          <nav className="w-full md:w-[min(100%,36rem)]" aria-label="Lists">
-            <div className="flex flex-wrap gap-3 md:justify-end">
-              {lists.map((entry) => {
-                const isActive = activeList?.slug === entry.slug
-
-                return (
-                  <a
-                    key={entry.slug}
-                    className={`inline-flex min-h-10 items-center rounded-full border px-3 py-2 text-sm leading-tight transition-colors md:px-3.5 ${
-                      isActive
-                        ? 'border-black/15 bg-black/10 font-medium text-black'
-                        : 'border-black/10 bg-white/60 text-black/75 hover:bg-black/5'
-                    }`}
-                    href={`/${entry.slug}`}
-                    aria-current={isActive ? 'page' : undefined}
-                    onClick={(event) => {
-                      event.preventDefault()
-                      setCurrentSlug(entry.slug)
-                      navigateToSlug(entry.slug)
-                    }}
-                  >
-                    {entry.title}
-                  </a>
-                )
-              })}
+          <nav className="w-full md:w-[min(100%,32rem)]" aria-label="Lists">
+            <div className="md:ml-auto md:w-full md:max-w-[32rem]">
+              <Select
+                aria-label="Choose a list"
+                className="w-full text-xs md:text-sm"
+                options={lists.map((entry) => ({
+                  label: entry.title,
+                  value: entry.slug,
+                }))}
+                value={activeList?.slug ?? ''}
+                onChange={(event) => {
+                  const nextSlug = event.target.value
+                  setCurrentSlug(nextSlug)
+                  navigateToSlug(nextSlug)
+                }}
+              />
             </div>
           </nav>
         </header>
