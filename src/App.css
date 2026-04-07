@@ -1,0 +1,73 @@
+.content__markdown {
+  text-align: left;
+}
+
+.content__markdown h1,
+.content__markdown h2,
+.content__markdown h3,
+.content__markdown h4,
+.content__markdown h5,
+.content__markdown h6 {
+  margin-top: 0;
+  text-align: left;
+}
+
+.content__markdown h1 + h2,
+.content__markdown h2 + h3,
+.content__markdown h3 + h4,
+.content__markdown h4 + h5,
+.content__markdown h5 + h6 {
+  margin-top: 1.5rem;
+}
+
+.content__markdown h2,
+.content__markdown h3,
+.content__markdown h4,
+.content__markdown h5,
+.content__markdown h6 {
+  margin-top: 2.25rem;
+  margin-bottom: 0.9rem;
+}
+
+.content__markdown p,
+.content__markdown ul,
+.content__markdown ol,
+.content__markdown table {
+  margin-top: 0.9rem;
+}
+
+.content__markdown table {
+  width: 100%;
+  margin-top: 1.25rem;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--border1) 92%, var(--text-h) 18%);
+  border-collapse: collapse;
+  border-radius: 1rem;
+  background: color-mix(in srgb, var(--surface0) 98%, transparent);
+  box-shadow: 0 8px 24px color-mix(in srgb, var(--primary) 8%, transparent);
+}
+
+.content__markdown thead th {
+  min-width: 8rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid color-mix(in srgb, var(--border1) 92%, var(--text-h) 18%);
+  text-align: left;
+  line-height: 1.4;
+  background: color-mix(in srgb, var(--surface1) 96%, var(--background) 4%);
+}
+
+.content__markdown tbody tr:nth-child(even) {
+  background: color-mix(in srgb, var(--surface1) 70%, transparent);
+}
+
+.content__markdown tbody tr:nth-child(odd) {
+  background: color-mix(in srgb, var(--surface0) 98%, transparent);
+}
+
+.content__markdown td {
+  padding: 0.9rem 1rem;
+  border: 1px solid color-mix(in srgb, var(--border1) 92%, var(--text-h) 18%);
+  text-align: left;
+  line-height: 1.5;
+  vertical-align: top;
+}
