@@ -14,12 +14,3 @@ Restaurants within about **1 km** of **Maria 01** (`Lapinlahdenkatu 16, 00180 He
 | Salve | 900 m to 1 km | Hietalahti / Punavuori | [Salve](https://www.ravintolasalve.fi/) | Old Helsinki classic. |
 | Kannas | 950 m to 1 km | Punavuori / Hietalahti | [Kannas](https://www.ravintolakannas.fi/) | Probably still within range depending on route. |
 
-## Maria 01 reference point
-- **Place:** Maria 01
-- **Address:** Lapinlahdenkatu 16, 00180 Helsinki
-- **Campus page:** [Maria 01](https://maria.io/about/contact-us/)
-
-## Notes
-- Where I could verify a real lunch page, I used that instead of the restaurant homepage.
-- A couple of entries still use the restaurant’s own page because I would rather leave one imperfect link than hallucinate a fake lunch URL like a broken autocomplete demo.
-- If you want, I can do one more strict cleanup pass later and replace the remaining generic links with only direct lunch-list pages.
