@@ -1,0 +1,4 @@
+@import "tailwindcss";
+@import "@mahdava/ui/styles.css";
+@import "@mahdava/ui/themes/default.css";
+@import "./index.css";
